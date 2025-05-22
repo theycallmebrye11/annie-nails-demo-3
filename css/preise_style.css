@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F7F7;
+    color: #000000;
+}
+/*------------------PREISE SECTION----------------------*/
+.container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #854836;
+    margin-bottom: 2rem;
+}
+
+.columns {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category {
+    flex: 1 1 300px;
+    background-color: #F7F7F7;
+    border: 2px solid #854836;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.category h2 {
+    background-color: #854836;
+    color: #F7F7F7;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price {
+    color: var(--gold-primary);
+    font-weight: bold;
+}
+
+a {
+    color: #854836;
+    text-decoration: none;
+    font-weight: 500;;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+.note {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #854836;
+}
+
+.column-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ad705d;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ad705d;
+    padding-bottom: 10px;
+}
+/*------------------FOOTER SECTION----------------------*/
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #854836;
+}

@@ -1,0 +1,58 @@
+:root {
+    --gold-primary: #bb9333;     /* Main brand gold */
+    --gold-accent: #d4ac4c;      /* Lighter gold for hover states */
+    --gold-highlight: #FFD700;   /* Original gold for small attention elements */
+}
+
+/* Navbar Styles */
+.navbar {    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    transform: translateY(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    background-color: #854836;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 15px 0;
+    text-align: center;
+    will-change: transform;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;    background-color: var(--gold-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {    color: var(--gold-highlight);
+    text-decoration: none;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {    color: var(--gold-primary);
+    font-weight: bold;
+}
+
+/* Ensure content doesn't hide under navbar */
+body {
+    padding-top: 60px; /* Adjust based on navbar height */
+}

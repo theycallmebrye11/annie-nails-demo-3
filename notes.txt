@@ -1,0 +1,7 @@
+1.  COLOUR PALETTE:
+    - #bb9333 (primary gold)
+    - #d4ac4c (accent gold)
+    - #FFD700 (highlight gold)
+    - #F7F7F7 (grey/white)
+    - #854836 (brown)
+    - #000000 (black)

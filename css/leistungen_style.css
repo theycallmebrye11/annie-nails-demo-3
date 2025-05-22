@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F7F7;
+    color: #000000;
+}
+
+/*------------------Main Content ----------------------*/
+h1 {
+    color: #854836;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #854836;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #854836;
+    margin-bottom: 1rem;
+}
+
+/*------------------FOOTER SECTION----------------------*/
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #854836;
+}
