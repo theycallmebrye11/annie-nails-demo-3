@@ -56,3 +56,60 @@
 body {
     padding-top: 60px; /* Adjust based on navbar height */
 }
+
+.sparkle {
+    display: inline-block;
+    animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Make alternate sparkles twinkle with a slight delay for a more dynamic effect */
+.sparkle:nth-child(2n) {
+    animation-delay: 0.75s;
+}
+
+.sparkle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-sparkle {
+    position: absolute;
+    pointer-events: none;
+    animation: float-sparkle 3s linear infinite;
+    opacity: 0;
+    z-index: 0;
+}
+
+@keyframes float-sparkle {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--end-x), var(--end-y)) rotate(360deg) scale(1);
+        opacity: 0;
+    }
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
