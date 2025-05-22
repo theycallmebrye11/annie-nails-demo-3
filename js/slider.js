@@ -61,22 +61,36 @@ document.addEventListener('DOMContentLoaded', function() {
     sliderContainer.addEventListener('mouseleave', startAutoSlide);
 
     // Start auto-sliding
-    startAutoSlide();
-
-    // Touch support for mobile devices
+    startAutoSlide();    // Touch support for mobile devices
     let touchStartX = 0;
     let touchEndX = 0;
 
+    // Touch events for showing captions
+    sliderContainer.addEventListener('touchstart', () => {
+        sliderContainer.classList.add('touched');
+        stopAutoSlide(); // Stop auto-sliding when touching
+    }, { passive: true });
+
+    sliderContainer.addEventListener('touchend', () => {
+        sliderContainer.classList.remove('touched');
+        startAutoSlide(); // Resume auto-sliding when touch ends
+    }, { passive: true });
+
+    // Touch events for sliding
     slider.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].screenX;
-    }, false);
+    }, { passive: true });
 
     slider.addEventListener('touchend', e => {
         touchEndX = e.changedTouches[0].screenX;
-        if (touchStartX - touchEndX > 50) {
-            nextSlide();
-        } else if (touchEndX - touchStartX > 50) {
-            prevSlide();
+        const swipeDistance = Math.abs(touchEndX - touchStartX);
+        
+        if (swipeDistance > 50) {  // Only trigger slide if swipe is significant
+            if (touchStartX - touchEndX > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
         }
-    }, false);
+    }, { passive: true });
 });
